@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Mahasiswa Baru</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        header {
+            background-color: #005f73;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Form Absen Mahasiswa</h1>
+    </header>
+
+    <main>
+        <section id="form-section">
+            <h2>Isi Data Diri Anda</h2>
+
+            <!-- Form -->
+            <form id="formAbsen" onsubmit="return submitForm(event)">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan email aktif">
+                </div>
+
+                <div class="form-group">
+                    <label for="nim">NIM</label>
+                    <input type="text" id="nim" name="nim" placeholder="Masukkan NIM (angka)">
+                </div>
+
+                <div class="form-group">
+                    <label for="jurusan">Jurusan</label>
+                    <select id="jurusan" name="jurusan">
+                        <option value="">-- Pilih Jurusan --</option>
+                        <option value="Teknik Informatika">Teknik Informatika</option>
+                        <option value="Sistem Informasi">Sistem Informasi</option>
+                        <option value="Teknik Komputer">Teknik Komputer</option>
+                    </select>
+                </div>
+
+                <button type="submit" style="background-color:#0a9396; color:white;">Kirim Data</button>
+            </form>
+        </section>
+
+        <section id="data-section">
+            <h2>Data Mahasiswa yang Sudah Absen</h2>
+            <table id="tabelMahasiswa">
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Email</th>
+                        <th>NIM</th>
+                        <th>Jurusan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data akan ditambahkan di sini lewat JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Universitas Terbuka</p>
+    </footer>
+
+    <!-- External JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
